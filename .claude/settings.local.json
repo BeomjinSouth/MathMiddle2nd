@@ -10,7 +10,8 @@
       "Bash(rm:*)",
       "Bash(mv:*)",
       "Bash(git push:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git remote add:*)"
     ],
     "deny": [],
     "ask": []
