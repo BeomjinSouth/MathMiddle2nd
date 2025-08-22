@@ -8,7 +8,9 @@
       "Bash(npm uninstall:*)",
       "WebFetch(domain:www.desmos.com)",
       "Bash(rm:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
