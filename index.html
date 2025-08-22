@@ -4,10 +4,33 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>중2 평면도형 정당화 도구</title>
+    <link rel="stylesheet" href="https://www.desmos.com/api/v1.11/calculator.css" />
+    <!-- Desmos API 스타일링을 위한 기본 CSS -->
+    <style>
+      .dcg-container {
+        border-radius: 8px;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <!-- Desmos Graphing Calculator API - Direct loading -->
+    <script>console.log('[HTML] About to load Desmos API...');</script>
+    <script 
+      src="https://www.desmos.com/api/v1.11/calculator.js?apiKey=bc5b4a55b86e4fb899b1e31c37d45137&lang=ko"
+      onload="console.log('[HTML] Desmos API loaded successfully via script tag'); window.DESMOS_LOADED = true;"
+      onerror="console.error('[HTML] Failed to load Desmos API via script tag'); window.DESMOS_ERROR = true;">
+    </script>
+    <script>
+      setTimeout(() => {
+        console.log('[HTML] 2 seconds after script tag - Desmos available:', !!window.Desmos);
+        if (window.Desmos) {
+          console.log('[HTML] Desmos object properties:', Object.keys(window.Desmos));
+        }
+      }, 2000);
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(npm install)",
+      "Bash(npm run lint)",
+      "Bash(tsc:*)",
+      "Bash(npm uninstall:*)",
+      "WebFetch(domain:www.desmos.com)",
+      "Bash(rm:*)",
+      "Bash(mv:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
